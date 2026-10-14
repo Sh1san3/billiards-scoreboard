@@ -90,7 +90,8 @@
     .toast.show { opacity:1; transform:translate(-50%,0); } [hidden] { display:none!important; }
     @media (orientation:portrait) and (max-width:900px) {
       html,body { width:100%; height:100%; min-height:100%; overflow:hidden; }
-      .app { position:fixed; top:0; left:0; width:100dvh; max-width:none; height:100dvw; min-height:100dvw; overflow:auto; transform:rotate(90deg) translateY(-100%); transform-origin:top left; }
+      .app { position:fixed; top:0; left:0; width:100dvh; max-width:none; height:100dvw; min-height:100dvw; overflow:auto; overscroll-behavior:contain; -webkit-overflow-scrolling:touch; transform:rotate(90deg) translateY(-100%); transform-origin:top left; }
+      .toast { position:absolute; }
     }
     @media (orientation:landscape) and (max-height:600px) and (min-width:560px), (orientation:portrait) and (max-width:900px) {
       html,body { min-height:100dvh; overflow:auto; }
@@ -147,10 +148,11 @@
     </section>
     <div class="sub-actions"><button class="sub-btn" id="undoBtn" type="button">撤销上一步</button><button class="sub-btn" id="saveMatchBtn" type="button">保存本场</button><button class="sub-btn danger" id="resetBtn" type="button">当前模式清零</button></div>
     <section class="history"><div class="section-title"><h2>计分记录</h2><span id="roundCount">0次变动</span></div><div class="history-list" id="historyList"></div></section>
+    <div class="toast" id="toast" role="status"></div>
   </main>
   <dialog id="setupDialog"><form id="setupForm"><div class="dialog-head"><h2>对局设置</h2><p id="setupHint">追分模式支持2—4人。</p></div><div class="dialog-body"><div class="setup-row" id="countRow"><label for="playerCount">玩家人数</label><select id="playerCount"><option value="2">2人</option><option value="3">3人</option><option value="4">4人</option></select></div><div class="setup-row" id="raceRow" hidden><label for="raceTarget">中八局制</label><select id="raceTarget"><option value="3">抢3</option><option value="5">抢5</option><option value="7">抢7</option><option value="9">抢9</option><option value="11">抢11</option></select></div><div class="name-fields" id="nameFields"></div><div class="dialog-actions"><button class="secondary-btn" id="cancelSetup" type="button">取消</button><button class="primary-btn" type="submit">保存设置</button></div></div></form></dialog>
   <dialog id="recordsDialog"><div class="dialog-head"><h2>历史记录</h2><p>按保存时间保留在当前手机。</p></div><div class="dialog-body"><div class="records-list" id="recordsList"></div><div class="dialog-actions"><button class="secondary-btn" id="clearRecordsBtn" type="button">清空记录</button><button class="primary-btn" id="closeRecordsBtn" type="button">完成</button></div></div></dialog>
   <dialog id="confirmDialog"><div class="dialog-head"><h2 id="confirmTitle">确认操作</h2></div><div class="dialog-body"><p class="confirm-copy" id="confirmCopy"></p><div class="dialog-actions"><button class="secondary-btn" id="confirmCancel" type="button">取消</button><button class="primary-btn" id="confirmOk" type="button">确认</button></div></div></dialog>
-  <div class="toast" id="toast" role="status"></div><script src="./app.js?v=8"></script>
+  <script src="./app.js?v=12"></script>
 </body>
 </html>
