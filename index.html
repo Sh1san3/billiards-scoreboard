@@ -125,7 +125,7 @@
       .history-list { grid-template-columns:repeat(2,minmax(0,1fr)); }
       dialog { max-height:calc(100dvh - 16px); }
     }
-    @media(min-width:600px){ .app{padding-top:26px}.score-grid[data-count="3"],.score-grid[data-count="4"]{grid-template-columns:repeat(4,1fr)}.score-card{min-height:220px}.player-score{min-height:169px;font-size:96px} }
+    @media(min-width:600px){ .app{padding-top:26px}.score-grid[data-count="3"]{grid-template-columns:repeat(3,minmax(0,1fr))}.score-grid[data-count="4"]{grid-template-columns:repeat(4,minmax(0,1fr))}.score-card{min-height:220px}.player-score{min-height:169px;font-size:96px} }
     @media (orientation:landscape) and (max-height:600px) and (min-width:560px) { .app{padding-top:max(7px,var(--safe-top))}.score-card{min-height:0}.player-score{min-height:0;font-size:clamp(56px,11vh,88px)} }
     @media (orientation:portrait) and (max-width:900px) { .app{width:100dvh;height:100dvw;min-height:100dvw}.score-card{min-height:0}.player-score{min-height:0;font-size:clamp(56px,11vh,88px)} }
   </style>
