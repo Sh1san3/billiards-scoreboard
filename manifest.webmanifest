@@ -1,0 +1,14 @@
+{
+  "name": "追分计分板",
+  "short_name": "追分",
+  "description": "追分与中式八球手机计分工具",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#f4f2ed",
+  "theme_color": "#182a3e",
+  "icons": [
+    { "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
