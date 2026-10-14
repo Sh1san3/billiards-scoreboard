@@ -1,4 +1,4 @@
-const CACHE = 'billiards-scoreboard-v7';
+const CACHE = 'billiards-scoreboard-v8';
 const ASSETS = ['./manifest.webmanifest', './icon.svg'];
 
 self.addEventListener('install', event => {
